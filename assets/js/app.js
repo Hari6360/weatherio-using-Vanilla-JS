@@ -80,14 +80,13 @@ const currentLocationBtn = document.querySelector(
 
 export const updateWeather = function (lat, lon) {
 	loading.style.display = "grid";
-	container.style.overflow = "hidden";
-	container.classList.contains("fade-in") ??
-		container.classList.remove("fade-in");
+	container.style.overflowY = "hidden";
+	container.classList.remove("fade-in");
 
 	const currentWeatherSection = document.querySelector(
 		"[data-current-weather]"
 	);
-	const highlightSection = document.querySelector(["data-highlights"]);
+	const highlightSection = document.querySelector("[data-highlights]");
 	const hourlySection = document.querySelector("[data-hourly-forecast]");
 	const forecastSection = document.querySelector("[data-5-day-forecast]");
 
@@ -166,9 +165,9 @@ export const updateWeather = function (lat, lon) {
 			card.innerHTML = `
         <h2 class="title-2" id="highlights-label">Todays Highlights</h2>
 
-        <div class="highlight-list">
+        <div class="highlights-list">
 
-          <div class="card card-sm highlight-card one">
+          <div class="card card-sm highlights-card one">
 
             <h3 class="title-3">Air Quality Index</h3>
 
@@ -214,7 +213,7 @@ export const updateWeather = function (lat, lon) {
 
           </div>
 
-          <div class="card card-sm highlight-card two">
+          <div class="card card-sm highlights-card two">
 
             <h3 class="title-3">Sunrise & Sunset</h3>
 
@@ -250,7 +249,7 @@ export const updateWeather = function (lat, lon) {
 
           </div>
 
-          <div class="card card-sm highlight-card">
+          <div class="card card-sm highlights-card">
 
             <h3 class="title-3">Humidity</h3>
 
@@ -262,7 +261,7 @@ export const updateWeather = function (lat, lon) {
 
           </div>
 
-          <div class="card card-sm highlight-card">
+          <div class="card card-sm highlights-card">
 
             <h3 class="title-3">Pressure</h3>
 
@@ -274,7 +273,7 @@ export const updateWeather = function (lat, lon) {
 
           </div>
 
-          <div class="card card-sm highlight-card">
+          <div class="card card-sm highlights-card">
 
             <h3 class="title-3">Visibility</h3>
 
@@ -286,7 +285,7 @@ export const updateWeather = function (lat, lon) {
 
           </div>
 
-          <div class="card card-sm highlight-card">
+          <div class="card card-sm highlights-card">
 
             <h3 class="title-3">Feels Like</h3>
 

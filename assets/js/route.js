@@ -1,7 +1,7 @@
 "use strict";
 
-import { updateWeather, error404 } from "./app.js";
-const defaultLocation = "#/weather?lat=51.5073219&lon=-0.1276474";
+import { updateWeather } from "./app.js";
+const defaultLocation = "#/weather?lat=51.5073219&lon=-0.1276474"; // London
 
 // funtion to get location from user using browser inbuilt functionality
 
@@ -35,11 +35,11 @@ const checkHash = function () {
 	routes.get(route) ? routes.get(route)(query) : error404();
 };
 
-window.addEventListener("hashChange", checkHash);
+window.addEventListener("hashchange", checkHash);
 
 window.addEventListener("load", function () {
-	if (!this.window.location.hash) {
-		this.window.location.hash = "#/current-location";
+	if (!window.location.hash) {
+		window.location.hash = "#/current-location";
 	} else {
 		checkHash();
 	}
