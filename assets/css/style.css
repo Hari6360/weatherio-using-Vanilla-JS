@@ -592,10 +592,10 @@ article.container::before {
 	align-items: center;
 	gap: 8px;
 }
-.current-weather-card .meta-item :not(:last-child) {
+.current-weather-card .meta-item:not(:last-child) {
 	margin-block-end: 12px;
 }
-.current-weather-card.meta-text {
+.current-weather-card .meta-text {
 	color: var(--on-surface-variant);
 }
 
@@ -633,11 +633,11 @@ article.container::before {
 .highlights .m-icon {
 	font-size: 3.2rem;
 }
-.highlights-list {
+.highlight-list {
 	display: grid;
 	gap: 20px;
 }
-.highlights-lists .title-3 {
+.highlight-list .title-3 {
 	color: var(--on-surface-variant);
 	margin-block-end: 20px;
 }
@@ -645,26 +645,26 @@ article.container::before {
 	background-color: var(--black-alpha-10);
 	position: relative;
 }
-.highlights-card :is(.wrapper, .card-list, .card-item) {
+.highlight-card :is(.wrapper, .card-list, .card-item) {
 	display: flex;
 	align-items: center;
 }
-.highlights-card .wrapper {
+.highlight-card .wrapper {
 	justify-content: space-between;
 	gap: 16px;
 }
-.highlights-card .card-list {
+.highlight-card .card-list {
 	flex-wrap: wrap;
 	flex-grow: 1;
 	row-gap: 8px;
 }
 
-.highlights-card .card-item {
+.highlight-card .card-item {
 	width: 50%;
 	justify-content: flex-end;
 	gap: 4px;
 }
-.highlights-card .label-1 {
+.highlight-card .label-1 {
 	color: var(--on-surface-variant);
 }
 
@@ -702,21 +702,14 @@ article.container::before {
 	background-color: var(--bg-aqi-5);
 	color: var(--on-bg-aqi-5);
 }
-.highlights-card.two .card-item {
+.highlight-card.two .card-item {
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	gap: 8px 16px;
 }
 
-.highlights-card.two .label-1 {
+.highlight-card.two .label-1 {
 	margin-block-end: 4px;
-}
-
-.sun-card {
-	display: flex;
-	justify-content: center;
-	gap: 10px;
-	height: 50px;
 }
 
 /*-----------------------------------*\

@@ -31,7 +31,7 @@ searchField.addEventListener("input", function () {
 	}
 
 	if (searchField.value) {
-		console.log("searchField.value");
+		// console.log("searchField.value");
 		searchTimeout = setTimeout(() => {
 			fetchData(url.geo(searchField.value), function (locations) {
 				searchField.classList.remove("searching");
@@ -96,7 +96,7 @@ export const updateWeather = function (lat, lon) {
 	forecastSection.innerHTML = "";
 
 	if (window.location.hash === "#/current-location") {
-		currentLocationBtn.setAttribute("disabled", "value");
+		currentLocationBtn.setAttribute("disabled", "");
 	} else {
 		currentLocationBtn.removeAttribute("disabled");
 	}
@@ -165,9 +165,9 @@ export const updateWeather = function (lat, lon) {
 			card.innerHTML = `
         <h2 class="title-2" id="highlights-label">Todays Highlights</h2>
 
-        <div class="highlights-list">
+        <div class="highlight-list">
 
-          <div class="card card-sm highlights-card one">
+          <div class="card card-sm highlight-card one">
 
             <h3 class="title-3">Air Quality Index</h3>
 
@@ -213,7 +213,7 @@ export const updateWeather = function (lat, lon) {
 
           </div>
 
-          <div class="card card-sm highlights-card two">
+          <div class="card card-sm highlight-card two">
 
             <h3 class="title-3">Sunrise & Sunset</h3>
 
@@ -249,7 +249,7 @@ export const updateWeather = function (lat, lon) {
 
           </div>
 
-          <div class="card card-sm highlights-card">
+          <div class="card card-sm highlight-card">
 
             <h3 class="title-3">Humidity</h3>
 
@@ -261,7 +261,7 @@ export const updateWeather = function (lat, lon) {
 
           </div>
 
-          <div class="card card-sm highlights-card">
+          <div class="card card-sm highlight-card">
 
             <h3 class="title-3">Pressure</h3>
 
@@ -273,7 +273,7 @@ export const updateWeather = function (lat, lon) {
 
           </div>
 
-          <div class="card card-sm highlights-card">
+          <div class="card card-sm highlight-card">
 
             <h3 class="title-3">Visibility</h3>
 
@@ -285,7 +285,7 @@ export const updateWeather = function (lat, lon) {
 
           </div>
 
-          <div class="card card-sm highlights-card">
+          <div class="card card-sm highlight-card">
 
             <h3 class="title-3">Feels Like</h3>
 

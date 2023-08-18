@@ -1,4 +1,4 @@
-`use strict';`;
+"use strict";
 
 export const weekDayNames = [
 	"Sunday",
@@ -25,16 +25,16 @@ export const monthNames = [
 	"Dec",
 ];
 
-export const getData = function (dateUnix, timezone) {
-	const data = new Date((dateUnix + timezone) * 1000);
-	const weekDayNames = weekDayNames[data.getUTCDay()];
-	const monthNames = monthNames[data.getUTCMonth()];
+export const getDate = function (dateUnix, timezone) {
+	const date = new Date((dateUnix + timezone) * 1000);
+	const weekDayName = weekDayNames[date.getUTCDay()];
+	const monthName = monthNames[date.getUTCMonth()];
 
-	return `${weekDayNames}${data.getUTCDate()},${monthNames}`;
+	return `${weekDayName} ${date.getUTCDate()}, ${monthName}`;
 };
 
-export const getTiime = function (timeunix, timezone) {
-	const date = new Date((timeunix + timezone) * 1000);
+export const getTime = function (timeUnix, timezone) {
+	const date = new Date((timeUnix + timezone) * 1000);
 	const hours = date.getUTCHours();
 	const minutes = date.getUTCMinutes();
 	const period = hours >= 12 ? "PM" : "AM";
@@ -51,7 +51,7 @@ export const getHours = function (timeUnix, timezone) {
 
 export const mps_to_kmh = (mps) => {
 	const mph = mps * 3600;
-	retunmph / 1000;
+	return mph / 1000;
 };
 export const aqiText = {
 	1: {
