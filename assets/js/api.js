@@ -7,6 +7,7 @@ export const fetchData = function (URL, callback) {
 		.then((res) => res.json())
 		.then((data) => callback(data));
 };
+// https://api.openweathermap.org/data/2.5/weather?q=ananthapur&appid=f1f7c6667be07f20d3e901bfd7866caf
 
 export const url = {
 	currentWeather(lat, lon) {
@@ -24,4 +25,5 @@ export const url = {
 	geo(query) {
 		return `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5`;
 	},
+
 };

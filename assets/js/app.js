@@ -40,7 +40,7 @@ searchField.addEventListener("input", function () {
             <ul class="view-list" data-search-list></ul>
           `;
 
-				const /** {NodeList} | [] */ items = [];
+				const items = [];
 
 				for (const { name, lat, lon, country, state } of locations) {
 					const searchItem = document.createElement("li");
